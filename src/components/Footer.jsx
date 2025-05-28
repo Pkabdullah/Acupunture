@@ -11,16 +11,13 @@ const robotoCondensed = Roboto_Condensed({
 const Footer = () => {
   return (
     <footer className={`bg-black text-white ${robotoCondensed.className}`}>
-    
-      <div className="border-b border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-0">
-          
-          <div className="flex justify-center md:justify-start">
-            <Image src="/logo2.png" width={65} height={84} alt="Logo" />
-          </div>
 
-         
-          <nav className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center sm:justify-end gap-2 sm:gap-6 text-sm mt-4 md:mt-0">
+      <div className="border-b border-gray-800">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-row justify-between items-center gap-4">
+          <div className="flex justify-start">
+            <Image src="/logo2.png" width={65} height={84} alt="Logo" className='max-sm:w-[45px]' />
+          </div>
+          <nav className="flex flex-wrap items-center justify-end gap-3 max-sm:text-[10px]">
             <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
             <a href="/about" className="text-gray-300 hover:text-white transition-colors">About</a>
             <a href="/ecommerce" className="text-gray-300 hover:text-white transition-colors">E-Commerce</a>
@@ -30,10 +27,10 @@ const Footer = () => {
         </div>
       </div>
 
-     
+
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-         
+
           <div>
             <h3 className="text-lg font-medium mb-4">Location</h3>
             <address className="text-gray-400 text-sm not-italic leading-relaxed">
@@ -42,7 +39,7 @@ const Footer = () => {
             </address>
           </div>
 
-        
+
           <div>
             <h3 className="text-lg font-medium mb-4">Contact</h3>
             <div className="text-gray-400 text-sm space-y-2">
@@ -69,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
 
-    
+
       <div className="border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <p className="text-center text-gray-500 text-xs">

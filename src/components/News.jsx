@@ -64,8 +64,8 @@ const News = () => {
                   />
                 </div>
 
-                <div className="p-4 flex flex-col justify-between h-[200px]">
-                  <div className="flex justify-between items-center text-gray-500 font-medium mb-2">
+                <div className="pt-4 flex flex-col justify-between h-[200px]">
+                  <div className="flex justify-between items-center text-gray-500 font-medium ">
                     <h3 className="text-black text-base font-semibold lg:text-[30px]">{item.primaryText}</h3>
                     <span className='lg:text-[14px]'>{item.date}</span>
                   </div>

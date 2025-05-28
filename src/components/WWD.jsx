@@ -25,8 +25,7 @@ const ScrollCounter = ({ end, label }) => {
   return (
     <div
       ref={ref}
-      className="relative w-full h-[200px] bg-transparent flex items-center justify-center"
-    >
+      className="relative w-full h-[200px] bg-transparent flex items-center justify-center">
       <div className="absolute text-[100px] md:text-[180px] text-black/15 font-extrabold">
         {shouldCount ? <CountUp key={Math.random()} end={end} duration={2.5} /> : '0'}
       </div>
@@ -93,7 +92,7 @@ const WWD = ({ bgColor }) => {
         </div>
 
        
-        <div className="flex justify-center mt-10 flex-col md:flex-row gap-4 md:gap-0">
+        <div className="flex justify-center mt-10  flex-col md:flex-row lg:gap-4 -space-y-8 md:gap-0">
           <ScrollCounter end={55} label="PEOPLES" />
           <ScrollCounter end={13} label="YEARS" />
           <ScrollCounter end={10} label="CENTERS" />

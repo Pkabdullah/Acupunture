@@ -65,8 +65,7 @@ const Testimonials = ({ bgColor }) => {
             been the industry's standard dummy text ever since the 1500s
           </p>
         </div>
-
-        <div className="container mx-auto px-[73px] pt-12 pb-16">
+        <div className="container mx-auto lg:px-[74px] px-2 pt-12 pb-16">
           <Swiper
             spaceBetween={16}
             loop={true}
@@ -77,8 +76,8 @@ const Testimonials = ({ bgColor }) => {
             breakpoints={{
               0: { slidesPerView: 1, spaceBetween: 10 },
               640: { slidesPerView: 1, spaceBetween: 15 },
-              768: { slidesPerView: 2, spaceBetween: 20 },
-              1024: { slidesPerView: 3, spaceBetween: 30 },
+              768: { slidesPerView: 2, spaceBetween: 10 },
+              1024: { slidesPerView: 3, spaceBetween: 10 },
             }}
           >
             {content.map((testimonial) => (

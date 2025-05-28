@@ -60,52 +60,56 @@ const Services = () => {
         }
     ];
     return (
-        <section className={`${robotoCondensed.className} pt-24 py-16`}>
-           
-            <Image
-                src="/abtimg1.png"
-                alt='about us banner'
-                width={1440}
-                height={690}
-                className="w-full h-full "
-            /> <div className='max-w-7xl mx-auto'>
-            <div className="absolute inset-0 flex flex-col justify-center text-white pl-24 text-center">
-                <h1 className="lg:text-[60px] mb-4  leading-tight">
-                    Services
-                </h1>
-            </div></div>
-            <div className="flex flex-wrap justify-center gap-4 mt-20 max-w-7xl mx-auto">
-            
+        <section className={`${robotoCondensed.className} pt-16 pb-8`}>
+            {/* Banner */}
+            <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[690px]">
+                <Image
+                    src="/abtimg1.png"
+                    alt="about us banner"
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 flex flex-col justify-center text-center text-white px-4 sm:px-6 lg:px-24 max-w-7xl mx-auto">
+                    <h1 className="text-3xl md:text-5xl lg:text-[60px] font-bold">Services</h1>
+                    <p className="text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-light">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem  Ipsum has been the<br /> industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+            </div>
 
+            {/* Service Cards */}
+            <div className="flex flex-wrap justify-center gap-6 mt-10 max-w-7xl mx-auto px-4 max-sm:space-y-8">
                 {content.map((item) => (
                     <div
                         key={item.id}
-                        className="w-[359px] bg-white  "
+                        className="w-full sm:w-[300px] md:w-[340px] lg:w-[359px] bg-white shadow-md"
                     >
-                        
-                        <div className="w-full h-[224px]">
+                        <div className="w-full h-[200px] sm:h-[224px]">
                             <img
                                 src={item.image}
                                 alt={item.primaryText}
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </div>
-
-                        <div className="p-4 flex flex-col justify-between h-[200px]">
-                            <div className="flex justify-between items-center text-gray-500 font-medium mb-2">
-                                <h3 className="text-black text-base font-semibold lg:text-[30px]">{item.primaryText}</h3>
-
+                        <div className="pt-4 flex flex-col justify-between h-[220px]">
+                            <div className="flex justify-between items-center text-gray-500 font-medium max-sm:-mb-10">
+                                <h3 className="text-black text-lg sm:text-xl lg:text-[30px] font-semibold">{item.primaryText}</h3>
                             </div>
-                            <p className="text-gray-600 lg:text-[14px] leading-snug mb-2">
+                            <p className="text-gray-600 text-sm sm:text-base leading-snug mb-2">
                                 {item.secondaryText}
                             </p>
-                            <span className=" cursor-pointer hover:underline font-semibold"><Button className={"rounded-none text-[20px] font-normal cursor-pointer"}>{item.button}</Button></span>
+
+                            <Button className="rounded-none text-base sm:text-lg font-normal ">{item.button}</Button>
                         </div>
                     </div>
                 ))}
-           </div>
+            </div>
         </section>
+
     )
 }
 
 export default Services
+

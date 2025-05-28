@@ -120,7 +120,7 @@ const Blogs = () => {
 
            
             <div className="px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-4 pt-8 sm:pt-12 lg:pt-16 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center space-y-8 gap-4 pt-8 sm:pt-12 lg:pt-16 max-w-7xl mx-auto">
                     {content.map((item) => (
                         <div
                             key={item.id}
@@ -136,21 +136,22 @@ const Blogs = () => {
                                 </Link>
                             </div>
 
-                            <div className="p-4 flex flex-col justify-between h-auto sm:h-auto lg:h-[200px]">
+                            <div className="pt-4 flex flex-col justify-between h-auto sm:h-auto lg:h-[200px]">
                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start lg:flex-row lg:justify-between lg:items-center text-gray-500 font-medium mb-2 gap-1 sm:gap-2 lg:gap-0">
                                     <h3 className="text-black text-lg sm:text-xl lg:text-base lg:font-semibold lg:lg:text-[30px] font-semibold leading-tight">
                                         {item.primaryText}
                                     </h3>
-                                    <span className="text-sm sm:text-base lg:lg:text-[14px] flex-shrink-0">
+                                    <span className="text-sm sm:text-base lg:text-[14px] flex-shrink-0 ">
                                         {item.date}
                                     </span>
                                 </div>
                                 <p className="text-gray-600 text-sm sm:text-base lg:lg:text-[14px] leading-snug mb-4 lg:mb-2">
                                     {item.secondaryText}
                                 </p>
+                                <Link href={`/innerBlog/${item.id}`} onClick={() => handleClick(item)}>
                                 <span className="cursor-pointer hover:underline font-semibold text-sm sm:text-base self-start">
                                     {item.button}
-                                </span>
+                                </span></Link>
                             </div>
                         </div>
                     ))}

@@ -36,7 +36,7 @@ const OurServices = () => {
                                 className="object-cover"
                                 quality={100}
                             />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                                 <h2 className="text-white text-[20px] sm:text-[28px] lg:text-[35px] font-semibold text-center">
                                     <Link href={"/services"} className='cursor-pointer'>
                                         {service.title}

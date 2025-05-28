@@ -120,7 +120,7 @@ const ECommerce = () => {
                                 className="object-cover w-full h-full transition-transform duration-300 cursor-pointer hover:scale-105 rounded-t-md"
                             />
                         </div>
-                        <div className="p-4 flex flex-col justify-between h-[220px]">
+                        <div className="pt-4 flex flex-col justify-between h-[220px]">
                             <div className="flex items-center justify-between font-medium text-gray-500 mb-2">
                                 <h3 className="text-black text-base font-semibold md:text-lg lg:text-[20px]">{item.name}</h3>
                                 <span className="text-md font-bold text-gray-900">{item.price}</span>
