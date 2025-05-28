@@ -43,11 +43,11 @@ const OurTeam = () => {
   ]
 
   return (
-    <section className={`py-20 bg-white ${robotoCondensed}`}>
+    <section className={`py-20 bg-white ${robotoCondensed.className}`}>
       <div className="container mx-auto px-4 max-w-6xl">
        
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl  text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-6">
             Our Team
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -56,12 +56,14 @@ const OurTeam = () => {
           </p>
         </div>
 
-     
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div 
               key={member.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              className="group bg-white rounded-2xl shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] hover:shadow-[0_8px_40px_0_rgba(0,0,0,0.15)] transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              style={{
+                boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 -2px 10px 0 rgba(0, 0, 0, 0.05)'
+              }}
             >
              
               <div className="relative overflow-hidden">
@@ -73,25 +75,22 @@ const OurTeam = () => {
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-             
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                   
                 </div>
               </div>
 
-            
               <div className="p-8 text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-wide">
                   {member.name}
                 </h3>
                 
-              
                 <div className="flex justify-center space-x-3">
                   <a 
                     href={member.social.facebook} 
                     className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
                   >
-                    <Facebook size={16}  className='text-white'/>
+                    <Facebook size={16} className='text-white'/>
                   </a>
                   <a 
                     href={member.social.twitter} 
@@ -103,7 +102,7 @@ const OurTeam = () => {
                     href={member.social.linkedin} 
                     className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:scale-110"
                   >
-                    <Linkedin size={16}  className='text-white'/>
+                    <Linkedin size={16} className='text-white'/>
                   </a>
                 </div>
               </div>

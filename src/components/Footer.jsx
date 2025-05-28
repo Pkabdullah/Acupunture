@@ -15,14 +15,14 @@ const Footer = () => {
       <div className="border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-row justify-between items-center gap-4">
           <div className="flex justify-start">
-            <Image src="/logo2.png" width={65} height={84} alt="Logo" className='max-sm:w-[45px]' />
+            <Image src="/logo2.png" width={65} height={84} alt="Logo" className='max-sm:w-[100%]' />
           </div>
-          <nav className="flex flex-wrap items-center justify-end gap-3 max-sm:text-[10px]">
+          <nav className="flex flex-wrap items-center justify-end gap-3 max-sm:text-[14px]">
             <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
             <a href="/about" className="text-gray-300 hover:text-white transition-colors">About</a>
             <a href="/ecommerce" className="text-gray-300 hover:text-white transition-colors">E-Commerce</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Blogs</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact us</a>
+            <a href="/blogs" className="text-gray-300 hover:text-white transition-colors">Blogs</a>
+            <a href="/contactUs" className="text-gray-300 hover:text-white transition-colors">Contact us</a>
           </nav>
         </div>
       </div>

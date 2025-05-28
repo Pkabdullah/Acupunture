@@ -11,7 +11,7 @@ const robotoCondensed = Roboto_Condensed({
 
 const Process = () => {
   return (
-    <section className={`bg-[#F5EDDB] pt-10 pb-16 ${robotoCondensed.className}`}>
+    <section className={`max-sm:h-[900px] h-[600px] bg-[#F5EDDB] pt-10 pb-16 ${robotoCondensed.className} `}>
       <h1 className='lg:text-5xl text-4xl text-center mb-8 text-gray-800'>2 Step Process</h1>
 
       <div className="flex justify-center">

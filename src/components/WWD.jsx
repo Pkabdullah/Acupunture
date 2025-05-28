@@ -91,11 +91,33 @@ const WWD = ({ bgColor }) => {
           </div>
         </div>
 
-       
-        <div className="flex justify-center mt-10  flex-col md:flex-row lg:gap-4 -space-y-8 md:gap-0">
-          <ScrollCounter end={55} label="PEOPLES" />
-          <ScrollCounter end={13} label="YEARS" />
-          <ScrollCounter end={10} label="CENTERS" />
+        {/* Triangular Counter Layout */}
+        <div className="mt-10">
+          {/* Mobile: Triangular Layout */}
+          <div className="block md:hidden">
+            {/* Top Row - Two counters */}
+            <div className="flex justify-center gap-4 -mb-8">
+              <div className="w-1/2 max-w-[200px]">
+                <ScrollCounter end={55} label="PEOPLES" />
+              </div>
+              <div className="w-1/2 max-w-[200px]">
+                <ScrollCounter end={13} label="YEARS" />
+              </div>
+            </div>
+            {/* Bottom Row - One centered counter */}
+            <div className="flex justify-center">
+              <div className="w-1/2 max-w-[200px]">
+                <ScrollCounter end={10} label="CENTERS" />
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden md:flex justify-center flex-row lg:gap-4">
+            <ScrollCounter end={55} label="PEOPLES" />
+            <ScrollCounter end={13} label="YEARS" />
+            <ScrollCounter end={10} label="CENTERS" />
+          </div>
         </div>
       </div>
     </section>
